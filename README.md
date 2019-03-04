@@ -1,4 +1,4 @@
-##bootstrap-toasts
+#bootstrap-toasts
 
 
 <p align="center">
@@ -14,11 +14,11 @@
 bootstrapToasts(title, body, time, delay, position, messageType)
 
 
-##How to install?
+#How to install?
 ```
 npm install bootstrap-toasts
 ```
-##How to use it?
+#How to use it?
 ```
 <script src="/bootstrap-toasts.min.js"></script>
 ```
