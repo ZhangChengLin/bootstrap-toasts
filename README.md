@@ -1,4 +1,4 @@
-#bootstrap-toasts
+## bootstrap-toasts
 
 Bootstrap components <a href="https://getbootstrap.com/docs/4.3/components/toasts/" title="Toasts">"Toasts"</a>
 
@@ -14,51 +14,67 @@ Currently relying on Bootstrap and jQuery environments, because it is a function
 </p>
 
 
-#How to install?
+## How to install?
 ```
 npm install bootstrap-toasts --save-dev
 ```
-#How to use it?
+## How to use it?
 ```
 <script src="/bootstrap-toasts.min.js"></script>
 
 bootstrapToasts(title, content, titleColor, delay, position, releaseTime, messageType);
 ```
 
----
-**title**
 
-Description
+## Parameter Description
 
----
-**content**
+- **title**
 
-Description
+Default value:
 
----
-**titleColor**
-
-Description
+Description:
 
 ---
-**delay**
+- **content**
 
-Description
+Default value:
 
----
-**position**
-
-Description
+Description:
 
 ---
-**releaseTime**
+- **titleColor**
 
-Description
+Default value:
+
+Description:
 
 ---
-**messageType**
+- **delay**
 
-Description
+Default value:
+
+Description:
+
+---
+- **position**
+
+Default value:
+
+Description:
+
+---
+- **releaseTime**
+
+Default value:
+
+Description:
+
+---
+- **messageType**
+
+Default value:
+
+Description:
 
 
 
