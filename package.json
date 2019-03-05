@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-toasts",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Bootstrap toasts",
   "main": "src/bootstrap-toasts.js",
   "scripts": {
