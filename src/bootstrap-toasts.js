@@ -2,7 +2,7 @@
  * Name:bootstrap-toasts
  * author:张成林<469946668@qq.com>
  * Github:https://github.com/zhangchenglin/bootstrap-toasts
- * Copyright (C) 张成林 2019
+ * Copyright (C) 2019 张成林
  * Licenses:MIT
  * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
  *
