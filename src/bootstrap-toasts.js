@@ -84,7 +84,7 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
         default:
     }
     toasts_header_icon.className = "toasts-icons toasts-icon-success";
-    toasts_header_strong.className = "ml-2 mr-auto";
+    toasts_header_strong.className = "ml-2 mr-auto toastsTitle";
     toasts_header_small.className = "text-muted";
     toasts_header_button.className = "ml-2 mb-1 close";
     toasts_header_button.setAttribute("data-dismiss", "toast");
@@ -135,6 +135,10 @@ function toasts_style() {
     style.type = "text/css";
     style.id = "bootstrap_toasts_css";
     style.innerHTML = "" +
+        ".toastsTitle {\n" +
+        "    display: inline-block;\n" +
+        "    transform: translateY(-25%);\n" +
+        "}\n" +
         ".toasts-icons {\n" +
         "    width: 22px;\n" +
         "    height: 22px;\n" +
