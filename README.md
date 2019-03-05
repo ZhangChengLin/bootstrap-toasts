@@ -17,7 +17,7 @@ bootstrapToasts(title, body, time, delay, position, messageType)
 
 #How to install?
 ```
-npm install bootstrap-toasts
+npm install bootstrap-toasts --save-dev
 ```
 #How to use it?
 ```

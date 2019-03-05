@@ -16,7 +16,6 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
     let toasts_area = document.createElement("div");
     let toasts = document.createElement("div");
     let toasts_header = document.createElement("div");
-    let toasts_header_icon = document.createElement("i");
     let toasts_header_strong = document.createElement("strong");
     let toasts_header_small = document.createElement("small");
     let toasts_header_button = document.createElement("button");
@@ -79,7 +78,6 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
             break;
         default:
     }
-    toasts_header_icon.className = "ml-2 toast-icon-success";
     toasts_header_strong.className = "ml-2 mr-auto";
     toasts_header_small.className = "text-muted";
     toasts_header_button.className = "ml-2 mb-1 close";
@@ -89,13 +87,12 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
     toasts_header_span.innerHTML = "&times;";
     toasts_header_strong.innerHTML = title ? title : "";
     toasts_header_small.innerHTML = releaseTime ? releaseTime : "";
-    toasts_body.className = "toast-body";
-    toasts_body.innerHTML = content ? content : "";
     toasts_header_button.appendChild(toasts_header_span);
-    toasts_header.appendChild(toasts_header_icon);
     toasts_header.appendChild(toasts_header_strong);
     toasts_header.appendChild(toasts_header_small);
     toasts_header.appendChild(toasts_header_button);
+    toasts_body.className = "toast-body";
+    toasts_body.innerHTML = content ? content : "";
     toasts.appendChild(toasts_header);
     toasts.appendChild(toasts_body);
     toasts_area.appendChild(toasts);
