@@ -12,7 +12,7 @@ Currently relying on Bootstrap and jQuery environments, because it is a function
 </p>
 
 
-bootstrapToasts(title, body, time, delay, position, messageType)
+bootstrapToasts(title, content, titleColor, delay, position, releaseTime, messageType)
 
 
 #How to install?
