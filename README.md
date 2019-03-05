@@ -1,5 +1,6 @@
 #bootstrap-toasts
 
+Currently relying on Bootstrap and jQuery environments, because it is a function extension of Bootstrap
 
 <p align="center">
 <img alt="GitHub Release" src="https://img.shields.io/github/release/zhangchenglin/bootstrap-toasts.svg">
