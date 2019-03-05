@@ -83,7 +83,7 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
             break;
         default:
     }
-    toasts_header_icon.className = "ml-2 toasts-icons toasts-icon-success";
+    toasts_header_icon.className = "toasts-icons toasts-icon-success";
     toasts_header_strong.className = "ml-2 mr-auto";
     toasts_header_small.className = "text-muted";
     toasts_header_button.className = "ml-2 mb-1 close";
@@ -136,7 +136,7 @@ function toasts_style() {
     style.id = "bootstrap_toasts_css";
     style.innerHTML = "" +
         ".toasts-icons {\n" +
-        "    position: absolute;\n" +
+        // "    position: absolute;\n" +
         "    width: 22px;\n" +
         "    height: 22px;\n" +
         "    left: 10px;\n" +
