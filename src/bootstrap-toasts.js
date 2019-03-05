@@ -34,7 +34,7 @@ function bootstrapToasts(title, content, releaseTime, delay, position, messageTy
             toasts_area.className = "mb-1 d-flex justify-content-center align-items-center";
     }
     toasts_area.id = toasts_area_ID;
-    toasts.className = "toasts";
+    toasts.className = "toast";
     toasts.id = toastsID;
     toasts.setAttribute("data-animation", "true");
     toasts.setAttribute("data-autohide", "true");
@@ -52,11 +52,11 @@ function bootstrapToasts(title, content, releaseTime, delay, position, messageTy
     }
 
     toasts.setAttribute("aria-atomic", "true");
-    toasts_header.className = "toasts_header";
+    toasts_header.className = "toast_header";
     toasts_header_strong.className = "mr-auto";
     toasts_header_small.className = "text-muted";
     toasts_header_button.className = "ml-2 mb-1 close";
-    toasts_header_button.setAttribute("data-dismiss", "toasts");
+    toasts_header_button.setAttribute("data-dismiss", "toast");
     toasts_header_button.setAttribute("aria-label", "Close");
     toasts_header_span.setAttribute("aria-hidden", "true");
     toasts_header_span.innerHTML = "&times;";
@@ -66,7 +66,7 @@ function bootstrapToasts(title, content, releaseTime, delay, position, messageTy
     toasts_header.appendChild(toasts_header_strong);
     toasts_header.appendChild(toasts_header_small);
     toasts_header.appendChild(toasts_header_button);
-    toasts_body.className = "toasts-body";
+    toasts_body.className = "toast-body";
     toasts_body.innerHTML = content ? content : "";
     toasts.appendChild(toasts_header);
     toasts.appendChild(toasts_body);
