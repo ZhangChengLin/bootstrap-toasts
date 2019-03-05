@@ -25,19 +25,40 @@ npm install bootstrap-toasts --save-dev
 bootstrapToasts(title, content, titleColor, delay, position, releaseTime, messageType);
 ```
 
-
+---
 **title**
 
+Description
+
+---
 **content**
 
+Description
+
+---
 **titleColor**
 
+Description
+
+---
 **delay**
 
+Description
+
+---
 **position**
 
+Description
+
+---
 **releaseTime**
 
+Description
+
+---
 **messageType**
+
+Description
+
 
 
