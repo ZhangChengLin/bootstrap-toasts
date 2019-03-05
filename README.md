@@ -1,5 +1,7 @@
 #bootstrap-toasts
 
+Bootstrap components <a href="https://getbootstrap.com/docs/4.3/components/toasts/" title="Toasts">"Toasts"</a>
+
 Currently relying on Bootstrap and jQuery environments, because it is a function extension of Bootstrap
 
 <p align="center">
