@@ -13,6 +13,9 @@ Currently relying on Bootstrap and jQuery environments, because it is a function
 <img alt="NPM License" src="https://img.shields.io/npm/l/bootstrap-toasts.svg">
 </p>
 
+## Demo 
+https://zhangchenglin.github.io/bootstrap-toasts/demo.html
+
 
 ## How to install?
 ```
