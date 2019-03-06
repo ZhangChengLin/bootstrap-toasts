@@ -35,10 +35,11 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
             toasts_area.className = "mb-1 d-flex justify-content-center align-items-center";
     }
     toasts_style();
-    delay = delay ? delay * 1e3 : 10e3;
     title = title ? title : "";
-    releaseTime = releaseTime ? releaseTime : "";
     content = content ? content : "";
+    delay = delay ? delay * 1e3 : 10e3;
+    releaseTime = releaseTime ? releaseTime : "";
+    messageType = messageType ? messageType : "alert";
 
     toasts_area.id = toasts_area_ID;
     toasts.className = "toast";
@@ -47,11 +48,11 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
     toasts.setAttribute("data-autohide", "true");
     toasts.setAttribute("data-delay", delay);
     switch (messageType) {
-        case 0:
+        case "status":
             toasts.setAttribute("role", "status");
             toasts.setAttribute("aria-live", "polite");
             break;
-        case 1:
+        case "alert":
         default:
             toasts.setAttribute("role", "alert");
             toasts.setAttribute("aria-live", "assertive");

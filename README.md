@@ -33,40 +33,69 @@ bootstrapToasts(title, content, titleColor, delay, position, releaseTime, messag
 
 - **title**
 
-Default value:
+Type:String
+
+Default value:undefined
 
 Description:
 
 ---
 - **content**
 
-Default value:
+Type:String
+
+Default value:undefined
 
 Description:
 
 ---
 - **titleColor**
 
+Type:String
+
 Default value:
 
 Description:
 
+| parameter |  |
+| :----------: | :----------: |
+| primary  |  |
+| secondary  |  |
+| success  |  |
+| danger  |  |
+| warning  |  |
+| info  |  |
+| dark  |  |
+
 ---
 - **delay**
 
-Default value:
+Type:Number
+
+Default value:10
+
+Unit:second
 
 Description:
 
 ---
 - **position**
 
+Type:String
+
 Default value:
 
 Description:
 
+| parameter |  |
+| :----------: | :----------: |
+| center  |  |
+| left  |  |
+| right  |  |
 ---
 - **releaseTime**
+
+Type:String
 
 Default value:
 
@@ -75,9 +104,14 @@ Description:
 ---
 - **messageType**
 
+Type:String
+
 Default value:
 
 Description:
 
-
+| parameter |  |
+| :----------: | :----------: |
+| alert  |  |
+| status  |  |
 
