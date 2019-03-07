@@ -80,10 +80,9 @@ Description:
 
 | parameter | code |
 | :----------: | :---------- |
-| 0  |  ```<div class="toast" data-autohide="false"></div>``` |
-| 1  |  ```<div class="toast" data-autohide="true" data-delay="1000"></div>``` |
-| 2  |  ```<div class="toast" data-autohide="true" data-delay="2000"></div>``` |
-| 3  |  ```<div class="toast" data-autohide="true" data-delay="3000"></div>``` |
+| 1  |  ```<div class="toast" data-delay="1000"></div>``` |
+| 2  |  ```<div class="toast" data-delay="2000"></div>``` |
+| 3  |  ```<div class="toast" data-delay="3000"></div>``` |
 | ...  |  ```...``` |
 ---
 - **position**

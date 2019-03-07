@@ -12,6 +12,7 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
     let TimeID = new Date().getTime();
     let toastsID = "toasts_" + TimeID;
     let toasts_area_ID = "toasts_area_" + TimeID;
+    let $toastsID = $("#" + toastsID);
     let document_body = document.querySelector("body");
     let toastsContainer = document.querySelector("#bootstrapToastsContainer");
     let toasts_area = document.createElement("div");
@@ -139,12 +140,12 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
     toastsContainer.appendChild(toasts_area);
     document_body.appendChild(toastsContainer);
 
-    $("#" + toastsID).toast({
+    $toastsID.toast({
         animation: true,
         autohide: true,
         delay: delay,
     });
-    $("#" + toastsID).toast("show");
+    $toastsID.toast("show");
     remove_bootstrap_toasts(toastsID, delay);
     remove_bootstrap_toasts_area(toasts_area_ID, delay);
 }
