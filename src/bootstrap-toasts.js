@@ -24,6 +24,13 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
     let toasts_header_span = document.createElement("span");
     let toasts_body = document.createElement("div");
 
+    title = title ? title : "";
+    content = content ? content : "";
+    titleColor = titleColor ? titleColor : "";
+    delay = delay ? delay * 1e3 : 10e3;
+    position = position ? position : "";
+    releaseTime = releaseTime ? releaseTime : "";
+    messageType = messageType ? messageType : "alert";
     switch (position) {
         case "topLeft":
             toasts_area.className = "m-1 position-absolute toasts-topLeft";
@@ -49,11 +56,6 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
     }
     toasts_style();
     bootstrapToastsContainer();
-    title = title ? title : "";
-    content = content ? content : "";
-    delay = delay ? delay * 1e3 : 10e3;
-    releaseTime = releaseTime ? releaseTime : "";
-    messageType = messageType ? messageType : "alert";
 
     toasts_area.id = toasts_area_ID;
     toasts.className = "toast";
