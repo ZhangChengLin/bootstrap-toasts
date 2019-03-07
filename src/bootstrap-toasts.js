@@ -9,9 +9,9 @@
 */
 
 function bootstrapToasts(title, content, titleColor, delay, position, releaseTime, messageType) {
-    let Time = new Date().getTime();
-    let toastsID = "toasts_" + Time;
-    let toasts_area_ID = "toasts_area_" + Time;
+    let TimeID = new Date().getTime();
+    let toastsID = "toasts_" + TimeID;
+    let toasts_area_ID = "toasts_area_" + TimeID;
     let document_body = document.querySelector("body");
     let toastsContainer = document.querySelector("#bootstrapToastsContainer");
     let toasts_area = document.createElement("div");
@@ -31,6 +31,7 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
     position = position ? position : "";
     releaseTime = releaseTime ? releaseTime : "";
     messageType = messageType ? messageType : "alert";
+
     switch (position) {
         case "topLeft":
             toasts_area.className = "m-1 position-absolute toasts-topLeft";
@@ -60,8 +61,8 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
     toasts_area.id = toasts_area_ID;
     toasts.className = "toast";
     toasts.id = toastsID;
+    delay === 0 ? toasts.setAttribute("data-autohide", "false") : toasts.setAttribute("data-autohide", "true");
     toasts.setAttribute("data-animation", "true");
-    toasts.setAttribute("data-autohide", "true");
     toasts.setAttribute("data-delay", delay);
     switch (messageType) {
         case "status":
@@ -123,25 +124,8 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
     toastsContainer.appendChild(toasts_area);
     document_body.appendChild(toastsContainer);
     $("#" + toastsID).toast("show");
-    romove_bootstrapToasts(toastsID, delay);
-    remove_bootstrapToasts_area(toasts_area_ID, delay);
 }
 
-function remove_bootstrapToasts_area(id, delay) {
-    let toasts_area = document.querySelector("#" + id);
-    delay = delay ? delay + 2e0 : 12e0;
-    setTimeout(function () {
-        toasts_area.parentElement.removeChild(toasts_area);
-    }, delay)
-}
-
-function romove_bootstrapToasts(id, delay) {
-    let toasts = document.querySelector("#" + id);
-    delay = delay ? delay + 2e0 : 12e0;
-    setTimeout(function () {
-        toasts.parentElement.removeChild(toasts);
-    }, delay)
-}
 
 function bootstrapToastsContainer() {
     let document_body = document.querySelector("body");
