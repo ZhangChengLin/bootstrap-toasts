@@ -25,7 +25,7 @@ npm install bootstrap-toasts --save-dev
 ```
 <script src="/bootstrap-toasts.min.js"></script>
 
-bootstrapToasts(title, content, titleColor, delay, position, releaseTime, messageType);
+bootstrapToasts(title, content, titleColor, delay, position, releaseTime, icon, ariaType)
 ```
 
 
@@ -113,11 +113,27 @@ Default value:
 Description:
 
 ---
-- **messageType**
+- **icon**
 
 Type:String
 
-Default value:
+Default value:undefined
+
+Description:
+
+| parameter |  |
+| :----------: | :----------: |
+| success  |  |
+| danger  |  |
+| warning  |  |
+| info  |  |
+
+
+- **ariaType**
+
+Type:String
+
+Default value:alert
 
 Description:
 

@@ -8,7 +8,7 @@
  *
 */
 
-function bootstrapToasts(title, content, titleColor, delay, position, releaseTime, messageType) {
+function bootstrapToasts(title, content, titleColor, delay, position, releaseTime, icon, ariaType) {
     let TimeID = new Date().getTime();
     let toastsID = "toasts_" + TimeID;
     let toasts_area_ID = "toasts_area_" + TimeID;
@@ -30,7 +30,8 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
     delay = delay ? delay * 1e3 : 10e3;
     position = position ? position : "";
     releaseTime = releaseTime ? releaseTime : "";
-    messageType = messageType ? messageType : "alert";
+    icon = icon ? icon : "";
+    ariaType = ariaType ? ariaType : "alert";
 
     switch (position) {
         case "topLeft":
@@ -61,10 +62,7 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
     toasts_area.id = toasts_area_ID;
     toasts.className = "toast";
     toasts.id = toastsID;
-    delay === 0 ? toasts.setAttribute("data-autohide", "false") : toasts.setAttribute("data-autohide", "true");
-    toasts.setAttribute("data-animation", "true");
-    toasts.setAttribute("data-delay", delay);
-    switch (messageType) {
+    switch (ariaType) {
         case "status":
             toasts.setAttribute("role", "status");
             toasts.setAttribute("aria-live", "polite");
@@ -101,7 +99,24 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
             break;
         default:
     }
-    toasts_header_icon.className = "toasts-icons toasts-iconSuccess";
+
+    switch (icon) {
+        case "success":
+            toasts_header_icon.className = "toasts-icons toasts-iconSuccess";
+            break;
+        case "danger":
+            toasts_header_icon.className = "toasts-icons toasts-iconSuccess";
+            break;
+        case "warning":
+            toasts_header_icon.className = "toasts-icons toasts-iconSuccess";
+            break;
+        case "info":
+            toasts_header_icon.className = "toasts-icons toasts-iconSuccess";
+            break;
+        default:
+            toasts_header_icon.className = "toasts-icons";
+    }
+
     toasts_header_strong.className = "ml-2 mr-auto toastsTitle";
     toasts_header_small.className = "text-muted";
     toasts_header_button.className = "ml-2 mb-1 close";
@@ -123,9 +138,30 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
     toasts_area.appendChild(toasts);
     toastsContainer.appendChild(toasts_area);
     document_body.appendChild(toastsContainer);
+
+    $("#" + toastsID).toast({
+        animation: true,
+        autohide: true,
+        delay: delay,
+    });
     $("#" + toastsID).toast("show");
+    remove_bootstrap_toasts(toastsID, delay);
+    remove_bootstrap_toasts_area(toasts_area_ID, delay);
 }
 
+function remove_bootstrap_toasts(id, delay) {
+    let toasts = document.querySelector("#" + id);
+    setTimeout(function () {
+        toasts.parentElement.removeChild(toasts);
+    }, delay + 1e3)
+}
+
+function remove_bootstrap_toasts_area(id, delay) {
+    let toasts_area = document.querySelector("#" + id);
+    setTimeout(function () {
+        toasts_area.parentElement.removeChild(toasts_area);
+    }, delay + 2e3)
+}
 
 function bootstrapToastsContainer() {
     let document_body = document.querySelector("body");
