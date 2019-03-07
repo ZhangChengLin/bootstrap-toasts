@@ -25,7 +25,7 @@ npm install bootstrap-toasts --save-dev
 ```
 <script src="/bootstrap-toasts.min.js"></script>
 
-bootstrapToasts(title, content, titleColor, delay, position, releaseTime, icon, ariaType)
+bootstrapToasts(title, content, titleColor, delay, position, releaseTime, icon, eventType, eventFunction, ariaType)
 ```
 
 
@@ -127,6 +127,32 @@ Description:
 | warning  |  |
 | info  |  |
 
+- **eventType**
+
+Type:String
+
+Default value:undefined
+
+Description:
+
+eventType and eventFunction must exist at the same time, otherwise the event function will be invalid.
+
+| parameter |  |
+| :----------: | :----------: |
+| show |  |
+| shown  |  |
+| hide  |  |
+| hidden  |  |
+
+- **eventFunction**
+
+Type:String
+
+Default value:undefined
+
+Description:
+
+eventType and eventFunction must exist at the same time, otherwise the event function will be invalid.
 
 - **ariaType**
 
@@ -140,4 +166,3 @@ Description:
 | :----------: | :----------: |
 | alert  |  |
 | status  |  |
-

@@ -8,7 +8,7 @@
  *
 */
 
-function bootstrapToasts(title, content, titleColor, delay, position, releaseTime, icon, ariaType) {
+function bootstrapToasts(title, content, titleColor, delay, position, releaseTime, icon, eventType, eventFunction, ariaType) {
     bootstrapToastsContainer();
     toasts_style();
     let TimeID = new Date().getTime();
@@ -145,23 +145,52 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
         autohide: true,
         delay: delay,
     });
+    if (eventType && eventFunction) bootstrap_events(toastsID, eventType, eventFunction);
     jQuery_toastsID.toast("show");
+
     remove_bootstrap_toasts(toastsID, delay);
     remove_bootstrap_toasts_area(toasts_area_ID, delay);
 }
 
-function remove_bootstrap_toasts(id, delay) {
-    let toasts = document.querySelector("#" + id);
+function remove_bootstrap_toasts(toasts_id, delay) {
+    let toasts = document.querySelector("#" + toasts_id);
     setTimeout(function () {
         toasts.parentElement.removeChild(toasts);
     }, delay + 1e3)
 }
 
-function remove_bootstrap_toasts_area(id, delay) {
-    let toasts_area = document.querySelector("#" + id);
+function remove_bootstrap_toasts_area(toasts_area_id, delay) {
+    let toasts_area = document.querySelector("#" + toasts_area_id);
     setTimeout(function () {
         toasts_area.parentElement.removeChild(toasts_area);
     }, delay + 2e3)
+}
+
+function bootstrap_events(toastsID, eventType, eventFunction) {
+    let toasts = $("#" + toastsID);
+    switch (eventType) {
+        case "show":
+            toasts.on("show.bs.toast", function () {
+                return eventFunction;
+            });
+            break;
+        case "shown":
+            toasts.on("shown.bs.toast", function () {
+                return eventFunction;
+            });
+            break;
+        case "hide":
+            toasts.on("hide.bs.toast", function () {
+                return eventFunction;
+            });
+            break;
+        case "hidden":
+            toasts.on("hidden.bs.toast", function () {
+                return eventFunction;
+            });
+            break;
+        default:
+    }
 }
 
 function bootstrapToastsContainer() {

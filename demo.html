@@ -9,7 +9,7 @@
 <body>
 
 <div class="container mt-3">
-    <div class="mt-2">
+    <div class="mt-4">
         <div>titleColors （标题背景颜色）</div>
         <a href="javascript:" class="btn btn-sm btn-primary"
            onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','primary')">Click（点击）</a>
@@ -28,7 +28,7 @@
         <a href="javascript:" class="btn btn-sm border border-dark"
            onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','')">Click（点击）</a>
     </div>
-    <div class="mt-2">
+    <div class="mt-4">
         <div>position （位置）</div>
         <a href="javascript:" class="btn btn-sm border border-dark"
            onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','',undefined,'topLeft')">topLeft（左上）</a>
@@ -45,7 +45,7 @@
         <a href="javascript:" class="btn btn-sm border border-dark"
            onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','',undefined,'center')">center（屏幕中心）</a>
     </div>
-    <div class="mt-2">
+    <div class="mt-4">
         <div>delay [second] （延迟[秒]）</div>
         <a href="javascript:" class="btn btn-sm border border-dark"
            onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','',5)">5（5秒）</a>
@@ -62,8 +62,103 @@
         <a href="javascript:" class="btn btn-sm border border-dark"
            onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','',60)">60（60秒）</a>
     </div>
+    <div class="mt-4 p-2 border border-secondary rounded">
+        <div class="mb-2">Events Type && Event Function （事件类型和事件函数）</div>
+        <div class="mb-2 p-2 rounded bg-secondary text-white">
+            <p>Event Type （事件类型）</p>
+            <div class="form-check form-check-inline">
+                <input type="radio" name="event_type" id="event_type_show" class="form-check-input" value="show">
+                <label for="event_type_show" class="form-check-label">show</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" name="event_type" id="event_type_shown" class="form-check-input" value="shown">
+                <label for="event_type_shown" class="form-check-label">shown</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" name="event_type" id="event_type_hide" class="form-check-input" value="hide">
+                <label for="event_type_hide" class="form-check-label">hide</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" name="event_type" id="event_type_hidden" class="form-check-input" value="hidden">
+                <label for="event_type_hidden" class="form-check-label">hidden</label>
+            </div>
+        </div>
+        <div class="mb-2 p-2 rounded bg-secondary text-white">
+            <p>Event Function （事件函数）</p>
+            <label for="eventFunction" class="form-check-label">select a function （请选择一个函数）</label>
+            <select id="eventFunction" class="custom-select" size="5">
+                <!--<option selected>select a function</option>-->
+                <option value="eventFunction_show">eventFunction_show</option>
+                <option value="eventFunction_shown">eventFunction_shown</option>
+                <option value="eventFunction_hide">eventFunction_hide</option>
+                <option value="eventFunction_hidden">eventFunction_hidden</option>
+            </select>
+        </div>
+
+        <div class="text-center">
+            <a id="events_demo_btn" href="javascript:" class="btn btn-sm btn-outline-secondary border border-secondary">Click</a>
+        </div>
+    </div>
 </div>
 
+
+<script id="events_function_demo">
+    let events_demo_btn = document.querySelector("#events_demo_btn");
+    events_demo_btn.addEventListener("click", function () {
+
+        let radio_eventType_value = eventType_value();
+        let option_eventFunction_value = eventFunction_value();
+
+        if (!radio_eventType_value) {
+            alert("Please select an event type. ");
+            alert("请选择事件类型。");
+            return;
+        }
+        if (!option_eventFunction_value) {
+            alert("Please select an event function.");
+            alert("请选择事件函数。");
+            return;
+        }
+
+        let content = "The type of event you selected is: " + radio_eventType_value + "<br>" + "The event function you selected is: " + option_eventFunction_value;
+        content += "<br>" + "您选择的事件类型是： " + radio_eventType_value + "<br>" + "您选择的事件函数是： " + option_eventFunction_value;
+
+        bootstrapToasts('title', content, "dark", 500, 'topLeft', '', '', radio_eventType_value, option_eventFunction_value);
+    });
+
+    function eventFunction_value() {
+        let option = document.querySelector("#eventFunction");
+        return option.value;
+    }
+
+    function eventType_value() {
+        let radio = document.querySelectorAll("[name='event_type']");
+        let radioValue;
+        for (let i = 0; i < radio.length; i++) {
+            if (radio[i].checked == true) {
+                radioValue = radio[i].value;
+                break;
+            }
+        }
+        return radioValue;
+    }
+
+    function eventFunction_show() {
+        alert("eventFunction_show");
+    }
+
+    function eventFunction_shown() {
+        alert("eventFunction_shown");
+    }
+
+    function eventFunction_hide() {
+        alert("eventFunction_hide");
+    }
+
+    function eventFunction_hidden() {
+        alert("eventFunction_hidden");
+    }
+</script>
 
 <script src="demoFiles/jquery.min.js"></script>
 <script src="demoFiles/popper.min.js"></script>
