@@ -1,9 +1,9 @@
 /*
- * Name:bootstrap-toasts
- * author:张成林<469946668@qq.com>
- * Github:https://github.com/zhangchenglin/bootstrap-toasts
+ * Name: bootstrap-toasts
+ * author: 张成林<469946668@qq.com>
+ * Github: https://github.com/zhangchenglin/bootstrap-toasts
  * Copyright (C) 2019 张成林
- * Licenses:MIT
+ * Licenses: MIT
  * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
  *
 */
@@ -12,7 +12,7 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
     title = title ? title : "";
     content = content ? content : "";
     titleColor = titleColor ? titleColor : "";
-    delay = delay ? delay * 1e3 : 10e3;
+    delay = delay ? delay * 1e3 : 1e4;
     position = position ? position : "";
     releaseTime = releaseTime ? releaseTime : "";
     icon = icon ? icon : "";
@@ -98,19 +98,18 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
             break;
         default:
     }
-
     switch (icon) {
         case "success":
             toasts_header_icon.className = "toasts-icons toasts-iconSuccess";
             break;
         case "danger":
-            toasts_header_icon.className = "toasts-icons toasts-iconSuccess";
+            toasts_header_icon.className = "toasts-icons toasts-iconDanger";
             break;
         case "warning":
-            toasts_header_icon.className = "toasts-icons toasts-iconSuccess";
+            toasts_header_icon.className = "toasts-icons toasts-iconWarning";
             break;
         case "info":
-            toasts_header_icon.className = "toasts-icons toasts-iconSuccess";
+            toasts_header_icon.className = "toasts-icons toasts-iconInfo";
             break;
         default:
             toasts_header_icon.className = "toasts-icons";

@@ -14,7 +14,11 @@ gulp.task("copy_static", copy_static);
 
 function min(done) {
     gulp.src([toasts_path])
-        .pipe(terser())
+        .pipe(terser({
+            output: {
+                comments: true,
+            }
+        }))
         .pipe(rename({
             suffix: ".min"
         }))

@@ -1,8 +1,15 @@
 ## bootstrap-toasts
 
+**Beta time**
+
 Bootstrap components <a href="https://getbootstrap.com/docs/4.3/components/toasts/" title="Toasts">"Toasts"</a>
 
-Currently relying on Bootstrap and jQuery environments, because it is a function extension of Bootstrap
+Currently relying on Bootstrap and jQuery environments, because it is a function extension of Bootstrap.
+
+Supports arbitrary calls of ten parameters, supports callback functions based on events.
+
+The minimum version of the production version should be no less than 0.1.0
+
 
 <p align="center">
 <img alt="GitHub Release" src="https://img.shields.io/github/release/zhangchenglin/bootstrap-toasts.svg">
@@ -78,7 +85,9 @@ Unit:second
 
 Description:
 
-| parameter | code |
+min value: 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  max value: any
+
+| parameter | similar code |
 | :----------: | :---------- |
 | 1  |  ```<div class="toast" data-delay="1000"></div>``` |
 | 2  |  ```<div class="toast" data-delay="2000"></div>``` |

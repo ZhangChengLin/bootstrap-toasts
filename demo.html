@@ -9,25 +9,6 @@
 <body>
 <div class="container mt-3">
     <div class="mt-4">
-        <div>titleColors （标题背景颜色）</div>
-        <a href="javascript:" class="btn btn-sm btn-primary"
-           onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','primary')">Click（点击）</a>
-        <a href="javascript:" class="btn btn-sm btn-secondary"
-           onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','secondary')">Click（点击）</a>
-        <a href="javascript:" class="btn btn-sm btn-success"
-           onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','success')">Click（点击）</a>
-        <a href="javascript:" class="btn btn-sm btn-danger"
-           onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','danger')">Click（点击）</a>
-        <a href="javascript:" class="btn btn-sm btn-warning"
-           onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','warning')">Click（点击）</a>
-        <a href="javascript:" class="btn btn-sm btn-info"
-           onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','info')">Click（点击）</a>
-        <a href="javascript:" class="btn btn-sm btn-dark"
-           onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','dark')">Click（点击）</a>
-        <a href="javascript:" class="btn btn-sm border border-dark"
-           onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','')">Click（点击）</a>
-    </div>
-    <div class="mt-4">
         <div>position （位置）</div>
         <a href="javascript:" class="btn btn-sm border border-dark"
            onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','',undefined,'topLeft')">topLeft（左上）</a>
@@ -44,25 +25,73 @@
         <a href="javascript:" class="btn btn-sm border border-dark"
            onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','',undefined,'center')">center（屏幕中心）</a>
     </div>
-    <div class="mt-4">
-        <div>delay [second] （延迟[秒]）</div>
-        <a href="javascript:" class="btn btn-sm border border-dark"
-           onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','',5)">5（5秒）</a>
-        <a href="javascript:" class="btn btn-sm border border-dark"
-           onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','',10)">10（10秒）</a>
-        <a href="javascript:" class="btn btn-sm border border-dark"
-           onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','',15)">15（15秒）</a>
-        <a href="javascript:" class="btn btn-sm border border-dark"
-           onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','',20)">20（20秒）</a>
-        <a href="javascript:" class="btn btn-sm border border-dark"
-           onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','',25)">25（25秒）</a>
-        <a href="javascript:" class="btn btn-sm border border-dark"
-           onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','',30)">30（30秒）</a>
-        <a href="javascript:" class="btn btn-sm border border-dark"
-           onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','',60)">60（60秒）</a>
-    </div>
     <div class="mt-4 p-2 border border-secondary rounded">
-        <div class="mb-2">Events Type && Event Function （事件类型和事件函数）</div>
+        <div class="mb-2 p-2 border border-secondary rounded">
+            <div>title （标题）</div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <label for="title" class="input-group-text text-success">title:</label>
+                </div>
+                <input type="text" name="title" id="title" class="form-control" value="Default Title">
+            </div>
+        </div>
+        <div class="mb-2 p-2 border border-secondary rounded" id="titleColor">
+            <div>title background color （标题背景颜色）</div>
+            <div class="mb-2 form-check form-check-inline">
+                <input type="radio" name="title_color" class="form-check-input" id="titleColor_primary" value="primary">
+                <label class="form-check-label btn btn-sm btn-outline-primary" for="titleColor_primary">primary</label>
+            </div>
+            <div class="mb-2 form-check form-check-inline">
+                <input type="radio" name="title_color" class="form-check-input" id="titleColor_secondary" value="secondary">
+                <label class="form-check-label btn btn-sm btn-outline-secondary" for="titleColor_secondary">secondary</label>
+            </div>
+            <div class="mb-2 form-check form-check-inline">
+                <input type="radio" name="title_color" class="form-check-input" id="titleColor_success" value="success">
+                <label class="form-check-label btn btn-sm btn-outline-success" for="titleColor_success">success</label>
+            </div>
+            <div class="mb-2 form-check form-check-inline">
+                <input type="radio" name="title_color" class="form-check-input" id="titleColor_danger" value="danger">
+                <label class="form-check-label btn btn-sm btn-outline-danger" for="titleColor_danger">danger</label>
+            </div>
+            <div class="mb-2 form-check form-check-inline">
+                <input type="radio" name="title_color" class="form-check-input" id="titleColor_warning" value="warning">
+                <label class="form-check-label btn btn-sm btn-outline-warning" for="titleColor_warning">warning</label>
+            </div>
+            <div class="mb-2 form-check form-check-inline">
+                <input type="radio" name="title_color" class="form-check-input" id="titleColor_info" value="info">
+                <label class="form-check-label btn btn-sm btn-outline-info" for="titleColor_info">info</label>
+            </div>
+            <div class="mb-2 form-check form-check-inline">
+                <input type="radio" name="title_color" class="form-check-input" id="titleColor_dark" value="dark">
+                <label class="form-check-label btn btn-sm btn-outline-dark" for="titleColor_dark">dark</label>
+            </div>
+        </div>
+        <div class="mb-2 p-2 border border-secondary rounded">
+            <div>Delay (延迟)</div>
+            <label for="delay">Please enter a valid number. （请输入有效数字）</label>
+            <div class="input-group mb-3">
+                <input type="number" class="form-control" id="delay" step="2" min="1" value="1">
+                <div class="input-group-append">
+                    <span class="input-group-text">second (秒)</span>
+                </div>
+            </div>
+        </div>
+        <div class="mb-2 p-2 border border-secondary rounded">
+            <div>Icon （图标）</div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="icon">Icon</label>
+                </div>
+                <select class="custom-select" id="icon">
+                    <option selected>Choose...</option>
+                    <option value="success">iconSuccess</option>
+                    <option value="danger">iconDanger</option>
+                    <option value="warning">iconWarning</option>
+                    <option value="info">iconInfo</option>
+                </select>
+            </div>
+        </div>
+
         <div class="mb-2 p-2 rounded bg-secondary text-white">
             <p>Event Type （事件类型）</p>
             <div class="form-check form-check-inline">
@@ -82,6 +111,7 @@
                 <label for="event_type_hidden" class="form-check-label">hidden</label>
             </div>
         </div>
+
         <div class="mb-2 p-2 rounded bg-secondary text-white">
             <p>Event Function （事件函数）</p>
             <label for="eventFunction" class="form-check-label">select a function （请选择一个函数）</label>
@@ -100,7 +130,8 @@
         </div>
     </div>
     <div class="mt-4">
-        <a class="btn btn-lg btn-outline-success w-100" href="javascript:" onclick="$('.toast').toast('hide');">Clear All Toasts</a>
+        <a class="btn btn-lg btn-outline-success w-100" href="javascript:" onclick="$('.toast').toast('hide');">Clear
+            All Toasts</a>
     </div>
 </div>
 <div style="min-height:500px;"></div>
@@ -110,33 +141,26 @@
     let events_demo_btn = document.querySelector("#events_demo_btn");
     events_demo_btn.addEventListener("click", function () {
 
-        let radio_eventType_value = eventType_value();
-        let option_eventFunction_value = eventFunction_value();
+        let title_value = select_value("title");
+        let radio_titleColor_value = radio_value("title_color");
+        let delay_value = select_value("delay");
+        let radio_eventType_value = radio_value("event_type");
+        let option_icon_value = select_value("icon");
+        let option_eventFunction_value = select_value("eventFunction");
         let option_eventFunction = option_eventFunction_value ? eval(option_eventFunction_value) : "";
         let content = "The type of event you selected is: " + radio_eventType_value + "<br>" + "The event function you selected is: " + option_eventFunction_value;
         content += "<br>" + "您选择的事件类型是： " + radio_eventType_value + "<br>" + "您选择的事件函数是： " + option_eventFunction_value;
 
-        if (!radio_eventType_value) {
-            alert("Please select an event type. ");
-            alert("请选择事件类型。");
-            return;
-        }
-        if (!option_eventFunction_value) {
-            alert("Please select an event function.");
-            alert("请选择事件函数。");
-            return;
-        }
-
-        bootstrapToasts('title', content, "dark", 10, 'topLeft', '', '', radio_eventType_value, option_eventFunction);
+        bootstrapToasts(title_value, content, radio_titleColor_value, delay_value, 'topLeft', '', option_icon_value, radio_eventType_value, option_eventFunction);
     });
 
-    function eventFunction_value() {
-        let option = document.querySelector("#eventFunction");
+    function select_value(id) {
+        let option = document.querySelector("#" + id);
         return option.value;
     }
 
-    function eventType_value() {
-        let radio = document.querySelectorAll("[name='event_type']");
+    function radio_value(name) {
+        let radio = document.querySelectorAll("[name='" + name + "']");
         let radioValue;
         for (let i = 0; i < radio.length; i++) {
             if (radio[i].checked === true) {
