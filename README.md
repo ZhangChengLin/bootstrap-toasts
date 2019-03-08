@@ -16,8 +16,12 @@ The minimum version of the production version should be no less than 0.1.0
 <img alt="GitHub License" src="https://img.shields.io/github/license/zhangchenglin/bootstrap-toasts.svg">
 </p>
 <p align="center">
-<a href="https://www.npmjs.com/package/bootstrap-toasts"><img alt="NPM Version" title="NPM Package" src="https://img.shields.io/npm/v/bootstrap-toasts.svg"></a>
+<a href="https://www.npmjs.com/package/bootstrap-toasts" target="_blank"><img alt="NPM Version" title="NPM Package" src="https://img.shields.io/npm/v/bootstrap-toasts.svg"></a>
 <img alt="NPM License" src="https://img.shields.io/npm/l/bootstrap-toasts.svg">
+</p>
+<p align="center">
+<a href="https://www.jsdelivr.com/package/npm/bootstrap-toasts" target="_blank">
+        <img src="https://data.jsdelivr.com/v1/package/npm/bootstrap-toasts/badge?style=rounded" alt="jsDelivr" title="jsDelivr">
 </p>
 
 ## Demo 
