@@ -144,6 +144,9 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
         delay: delay,
     });
     if (eventType && eventFunction) bootstrap_events(toastsID, eventType, eventFunction);
+    jQuery_toastsID.on("hidden.bs.toast", function () {
+        hide_bootstrap_toasts_container();
+    });
     jQuery_toastsID.toast("show");
 
     remove_bootstrap_toasts(toastsID, delay);
@@ -151,25 +154,30 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
     remove_bootstrap_toasts_container(delay);
 }
 
+function hide_bootstrap_toasts_container() {
+    let toasts_container = document.querySelector("#bootstrapToastsContainer");
+    toasts_container.classList.add("d-none");
+}
+
 function remove_bootstrap_toasts(toasts_id, delay) {
     let toasts = document.querySelector("#" + toasts_id);
     setTimeout(function () {
         toasts.parentElement.removeChild(toasts);
-    }, delay)
+    }, delay + 1e3)
 }
 
 function remove_bootstrap_toasts_area(toasts_area_id, delay) {
     let toasts_area = document.querySelector("#" + toasts_area_id);
     setTimeout(function () {
         toasts_area.parentElement.removeChild(toasts_area);
-    }, delay)
+    }, delay + 1e3)
 }
 
 function remove_bootstrap_toasts_container(delay) {
     let toasts_container = document.querySelector("#bootstrapToastsContainer");
     setTimeout(function () {
         toasts_container.parentElement.removeChild(toasts_container);
-    }, delay);
+    }, delay + 1e3);
 }
 
 function bootstrap_events(toastsID, eventType, eventFunction) {
@@ -203,7 +211,7 @@ function bootstrapToastsContainer() {
     let container = document.createElement("div");
     let toastsContainer = document.querySelector("#bootstrapToastsContainer");
 
-    if (toastsContainer) return;
+    if (toastsContainer) return toastsContainer.classList.remove("d-none");
     container.id = "bootstrapToastsContainer";
     container.className = "position-fixed w-100 h-100";
     container.style.top = "0";
