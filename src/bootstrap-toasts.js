@@ -171,22 +171,22 @@ function bootstrap_events(toastsID, eventType, eventFunction) {
     switch (eventType) {
         case "show":
             toasts.on("show.bs.toast", function () {
-                return eventFunction;
+                return eventFunction();
             });
             break;
         case "shown":
             toasts.on("shown.bs.toast", function () {
-                return eventFunction;
+                return eventFunction();
             });
             break;
         case "hide":
             toasts.on("hide.bs.toast", function () {
-                return eventFunction;
+                return eventFunction();
             });
             break;
         case "hidden":
             toasts.on("hidden.bs.toast", function () {
-                return eventFunction;
+                return eventFunction();
             });
             break;
         default:

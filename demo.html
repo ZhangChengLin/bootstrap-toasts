@@ -108,6 +108,9 @@
 
         let radio_eventType_value = eventType_value();
         let option_eventFunction_value = eventFunction_value();
+        let option_eventFunction = option_eventFunction_value ? eval(option_eventFunction_value) : "";
+        let content = "The type of event you selected is: " + radio_eventType_value + "<br>" + "The event function you selected is: " + option_eventFunction_value;
+        content += "<br>" + "您选择的事件类型是： " + radio_eventType_value + "<br>" + "您选择的事件函数是： " + option_eventFunction_value;
 
         if (!radio_eventType_value) {
             alert("Please select an event type. ");
@@ -120,10 +123,7 @@
             return;
         }
 
-        let content = "The type of event you selected is: " + radio_eventType_value + "<br>" + "The event function you selected is: " + option_eventFunction_value;
-        content += "<br>" + "您选择的事件类型是： " + radio_eventType_value + "<br>" + "您选择的事件函数是： " + option_eventFunction_value;
-
-        bootstrapToasts('title', content, "dark", 500, 'topLeft', '', '', radio_eventType_value, option_eventFunction_value);
+        bootstrapToasts('title', content, "dark", 500, 'topLeft', '', '', radio_eventType_value, option_eventFunction);
     });
 
     function eventFunction_value() {
@@ -135,7 +135,7 @@
         let radio = document.querySelectorAll("[name='event_type']");
         let radioValue;
         for (let i = 0; i < radio.length; i++) {
-            if (radio[i].checked == true) {
+            if (radio[i].checked === true) {
                 radioValue = radio[i].value;
                 break;
             }
@@ -144,19 +144,19 @@
     }
 
     function eventFunction_show() {
-        alert("eventFunction_show");
+        alert("The function you execute is " + "eventFunction_show()");
     }
 
     function eventFunction_shown() {
-        alert("eventFunction_shown");
+        alert("The function you execute is " + "eventFunction_shown()");
     }
 
     function eventFunction_hide() {
-        alert("eventFunction_hide");
+        alert("The function you execute is " + "eventFunction_hide()");
     }
 
     function eventFunction_hidden() {
-        alert("eventFunction_hidden");
+        alert("The function you execute is " + "eventFunction_hidden()");
     }
 </script>
 

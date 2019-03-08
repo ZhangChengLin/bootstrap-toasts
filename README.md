@@ -146,7 +146,7 @@ eventType and eventFunction must exist at the same time, otherwise the event fun
 
 - **eventFunction**
 
-Type:String
+Type:Function
 
 Default value:undefined
 
