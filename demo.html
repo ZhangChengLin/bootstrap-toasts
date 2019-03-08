@@ -7,7 +7,6 @@
     <title>Bootstrap toasts Demo</title>
 </head>
 <body>
-
 <div class="container mt-3">
     <div class="mt-4">
         <div>titleColors （标题背景颜色）</div>
@@ -92,14 +91,19 @@
                 <option value="eventFunction_shown">eventFunction_shown</option>
                 <option value="eventFunction_hide">eventFunction_hide</option>
                 <option value="eventFunction_hidden">eventFunction_hidden</option>
+                <option value="eventFunction_xxxx">Function that does not exist</option>
             </select>
         </div>
 
         <div class="text-center">
-            <a id="events_demo_btn" href="javascript:" class="btn btn-sm btn-outline-secondary border border-secondary">Click</a>
+            <a id="events_demo_btn" href="javascript:" class="btn btn-lg btn-outline-secondary border border-secondary">Click</a>
         </div>
     </div>
+    <div class="mt-4">
+        <a class="btn btn-lg btn-outline-success w-100" href="javascript:" onclick="$('.toast').toast('hide');">Clear All Toasts</a>
+    </div>
 </div>
+<div style="min-height:500px;"></div>
 
 
 <script id="events_function_demo">
@@ -123,7 +127,7 @@
             return;
         }
 
-        bootstrapToasts('title', content, "dark", 500, 'topLeft', '', '', radio_eventType_value, option_eventFunction);
+        bootstrapToasts('title', content, "dark", 10, 'topLeft', '', '', radio_eventType_value, option_eventFunction);
     });
 
     function eventFunction_value() {

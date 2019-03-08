@@ -9,12 +9,20 @@
 */
 
 function bootstrapToasts(title, content, titleColor, delay, position, releaseTime, icon, eventType, eventFunction, ariaType) {
+    title = title ? title : "";
+    content = content ? content : "";
+    titleColor = titleColor ? titleColor : "";
+    delay = delay ? delay * 1e3 : 10e3;
+    position = position ? position : "";
+    releaseTime = releaseTime ? releaseTime : "";
+    icon = icon ? icon : "";
+    ariaType = ariaType ? ariaType : "alert";
+
     bootstrapToastsContainer();
     toasts_style();
     let TimeID = new Date().getTime();
     let toastsID = "toasts_" + TimeID;
     let toasts_area_ID = "toasts_area_" + TimeID;
-    let document_body = document.querySelector("body");
     let toastsContainer = document.querySelector("#bootstrapToastsContainer");
     let toasts_area = document.createElement("div");
     let toasts = document.createElement("div");
@@ -25,15 +33,6 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
     let toasts_header_button = document.createElement("button");
     let toasts_header_span = document.createElement("span");
     let toasts_body = document.createElement("div");
-
-    title = title ? title : "";
-    content = content ? content : "";
-    titleColor = titleColor ? titleColor : "";
-    delay = delay ? delay * 1e3 : 10e3;
-    position = position ? position : "";
-    releaseTime = releaseTime ? releaseTime : "";
-    icon = icon ? icon : "";
-    ariaType = ariaType ? ariaType : "alert";
 
     switch (position) {
         case "topLeft":
@@ -137,7 +136,6 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
     toasts.appendChild(toasts_body);
     toasts_area.appendChild(toasts);
     toastsContainer.appendChild(toasts_area);
-    document_body.appendChild(toastsContainer);
 
     let jQuery_toastsID = $("#" + toastsID);
     jQuery_toastsID.toast({
@@ -194,13 +192,13 @@ function bootstrap_events(toastsID, eventType, eventFunction) {
 }
 
 function bootstrapToastsContainer() {
-    let document_body = document.querySelector("body");
     let container = document.createElement("div");
     let toastsContainer = document.querySelector("#bootstrapToastsContainer");
 
     if (toastsContainer) return;
     container.id = "bootstrapToastsContainer";
-    document_body.appendChild(container);
+    container.className = "position-fixed w-100 h-100";
+    document.body.insertBefore(container, document.body.firstChild);
 }
 
 function toasts_style() {
