@@ -148,20 +148,28 @@ function bootstrapToasts(title, content, titleColor, delay, position, releaseTim
 
     remove_bootstrap_toasts(toastsID, delay);
     remove_bootstrap_toasts_area(toasts_area_ID, delay);
+    remove_bootstrap_toasts_container(delay);
 }
 
 function remove_bootstrap_toasts(toasts_id, delay) {
     let toasts = document.querySelector("#" + toasts_id);
     setTimeout(function () {
         toasts.parentElement.removeChild(toasts);
-    }, delay + 1e3)
+    }, delay)
 }
 
 function remove_bootstrap_toasts_area(toasts_area_id, delay) {
     let toasts_area = document.querySelector("#" + toasts_area_id);
     setTimeout(function () {
         toasts_area.parentElement.removeChild(toasts_area);
-    }, delay + 2e3)
+    }, delay)
+}
+
+function remove_bootstrap_toasts_container(delay) {
+    let toasts_container = document.querySelector("#bootstrapToastsContainer");
+    setTimeout(function () {
+        toasts_container.parentElement.removeChild(toasts_container);
+    }, delay);
 }
 
 function bootstrap_events(toastsID, eventType, eventFunction) {
@@ -198,6 +206,7 @@ function bootstrapToastsContainer() {
     if (toastsContainer) return;
     container.id = "bootstrapToastsContainer";
     container.className = "position-fixed w-100 h-100";
+    container.style.top = "0";
     document.body.insertBefore(container, document.body.firstChild);
 }
 
