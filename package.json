@@ -15,12 +15,10 @@
     "toasts"
   ],
   "GitHub": "https://github.com/zhangchenglin/bootstrap-toasts",
-  "author": {
-    "name": "张成林",
-    "email": "469946668@qq.com"
-  },
+  "author": "张成林",
+  "authorEmail": "469946668@qq.com",
   "license": "MIT",
-  "licenseDescription": "Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).",
+  "licenseDescription": "under the MIT License (license terms are at http://opensource.org/licenses/MIT).",
   "devDependencies": {
     "gulp": "^4.0.0",
     "gulp-header": "^2.0.7",

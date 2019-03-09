@@ -17,8 +17,8 @@ const Copyright = {
         '/*!\n' +
         ' * Name: <%= package.name %>\n' +
         ' * Version: <%= package.version %>\n' +
-        ' * Author: <%= package.author.name %>\n' +
-        ' * Email: <%= package.author.email %>\n' +
+        ' * Author: <%= package.author %>\n' +
+        ' * Email: <%= package.authorEmail %>\n' +
         ' * Description: <%= package.description %>\n' +
         ' * Copyright (c) ' + new Date().getFullYear() + ' <%= package.author.name %>\n' +
         ' * Licenses: <%= package.license %>\n' +
