@@ -1,5 +1,6 @@
 const gulp = require("gulp");
 const terser = require("gulp-terser");
+const header = require("gulp-header");
 const rename = require("gulp-rename");
 
 //path
@@ -9,19 +10,37 @@ const bootstrap_js_path = './node_modules/bootstrap/dist/js/bootstrap.min.js';
 const popper_js_path = './node_modules/popper.js/dist/umd/popper.min.js';
 const toasts_path = "./src/bootstrap-toasts.js";
 
+//header Copyright
+const pkg = require('./package.json');
+const Copyright = {
+    full:
+        '/*!\n' +
+        ' * Name: <%= package.name %>\n' +
+        ' * Version: <%= package.version %>\n' +
+        ' * Author: <%= package.author.name %>\n' +
+        ' * Email: <%= package.author.email %>\n' +
+        ' * Description: <%= package.description %>\n' +
+        ' * Copyright (c) ' + new Date().getFullYear() + ' <%= package.author.name %>\n' +
+        ' * Licenses: <%= package.license %>\n' +
+        ' * <%= package.licenseDescription %>\n' +
+        ' * GitHub: <%= package.GitHub %>\n' +
+        ' */\n\n',
+    min: ""
+};
+
 gulp.task("min", min);
 gulp.task("copy_static", copy_static);
 
 function min(done) {
     gulp.src([toasts_path])
-        .pipe(terser({
-            output: {
-                comments: true,
-            }
-        }))
+        .pipe(terser({}))
+        .pipe(header(Copyright.full, {package: pkg}))
         .pipe(rename({
             suffix: ".min"
         }))
+        .pipe(gulp.dest("./dist/"));
+    gulp.src([toasts_path])
+        .pipe(header(Copyright.full, {package: pkg}))
         .pipe(gulp.dest("./dist/"));
     done();
 }

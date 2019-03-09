@@ -25,7 +25,7 @@ The minimum version of the production version should be no less than 0.1.0
 </p>
 
 ## Demo 
-https://zhangchenglin.github.io/bootstrap-toasts/demo.html
+<a href="https://zhangchenglin.github.io/bootstrap-toasts/demo.html" title="_blank" title="DEMO">https://zhangchenglin.github.io/bootstrap-toasts/demo.html</a>
 
 
 ## How to install?

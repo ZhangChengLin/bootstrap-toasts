@@ -1,3 +1,15 @@
+/*!
+ * Name: bootstrap-toasts
+ * Version: 0.0.11
+ * Author: 张成林
+ * Email: 469946668@qq.com
+ * Description: Bootstrap toasts
+ * Copyright (c) 2019 张成林
+ * Licenses: MIT
+ * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
+ * GitHub: https://github.com/zhangchenglin/bootstrap-toasts
+ */
+
 function bootstrapToasts(title, content, titleColor, delay, position, releaseTime, icon, eventType, eventFunction, ariaType) {
     title = title ? title : "";
     content = content ? content : "";

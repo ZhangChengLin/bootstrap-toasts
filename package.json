@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-toasts",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Bootstrap toasts",
   "main": "src/bootstrap-toasts.js",
   "scripts": {
@@ -14,10 +14,16 @@
     "bootstrap",
     "toasts"
   ],
-  "author": "张成林 <469946668@qq.com>",
+  "GitHub": "https://github.com/zhangchenglin/bootstrap-toasts",
+  "author": {
+    "name": "张成林",
+    "email": "469946668@qq.com"
+  },
   "license": "MIT",
+  "licenseDescription": "Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).",
   "devDependencies": {
     "gulp": "^4.0.0",
+    "gulp-header": "^2.0.7",
     "gulp-rename": "^1.4.0",
     "gulp-terser": "^1.1.7"
   }
