@@ -6,7 +6,7 @@ Bootstrap components <a href="https://getbootstrap.com/docs/4.3/components/toast
 
 Currently relying on Bootstrap and jQuery environments, because it is a function extension of Bootstrap.
 
-Supports arbitrary calls of ten parameters, supports callback functions based on events.
+Supports arbitrary calls of ten parameters, supports callback functions based on toasts events.
 
 The minimum version of the production version should be no less than 0.1.0
 
