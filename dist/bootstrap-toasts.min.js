@@ -1,10 +1,10 @@
 /*!
  * Name: bootstrap-toasts
- * Version: 0.0.11
+ * Version: 0.0.12
  * Author: 张成林
  * Email: 469946668@qq.com
  * Description: Bootstrap toasts
- * Copyright (c) 2019 
+ * Copyright (c) 2019 张成林
  * Licenses: MIT
  * under the MIT License (license terms are at http://opensource.org/licenses/MIT).
  * GitHub: https://github.com/zhangchenglin/bootstrap-toasts
