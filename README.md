@@ -25,6 +25,7 @@ The minimum version of the production version should be no less than 0.1.0
 </p>
 
 ## Demo 
+
 <a href="https://zhangchenglin.github.io/bootstrap-toasts/demo.html" title="_blank" title="DEMO">https://zhangchenglin.github.io/bootstrap-toasts/demo.html</a>
 
 
@@ -32,6 +33,19 @@ The minimum version of the production version should be no less than 0.1.0
 ```
 npm install bootstrap-toasts --save-dev
 ```
+
+## CDN
+- jsDelivr
+
+<pre><code>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-toasts/dist/bootstrap-toasts.js"></script>
+</code></pre>
+
+<pre><code>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-toasts/dist/bootstrap-toasts.min.js"></script>
+</code></pre>
+
+
 ## How to use it?
 ```
 <script src="/bootstrap-toasts.min.js"></script>
