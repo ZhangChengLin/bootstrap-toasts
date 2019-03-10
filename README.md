@@ -35,16 +35,13 @@ npm install bootstrap-toasts --save-dev
 ```
 
 ## CDN
-- jsDelivr
-
-<pre><code>
+- **jsDelivr**
+```
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-toasts/dist/bootstrap-toasts.js"></script>
-</code></pre>
-
-<pre><code>
+```
+```
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-toasts/dist/bootstrap-toasts.min.js"></script>
-</code></pre>
-
+```
 
 ## How to use it?
 ```
@@ -82,15 +79,15 @@ Default value:
 
 Description:
 
-| parameter |  |
-| :----------: | :----------: |
-| primary  |  |
-| secondary  |  |
-| success  |  |
-| danger  |  |
-| warning  |  |
-| info  |  |
-| dark  |  |
+| parameter|
+| :-------:| 
+| primary  |
+| secondary|
+| success  |
+| danger   |
+| warning  |
+| info     |
+| dark     |
 
 ---
 - **delay**
@@ -106,11 +103,12 @@ Description:
 min value: 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  max value: any
 
 | parameter | similar code |
-| :----------: | :---------- |
-| 1  |  ```<div class="toast" data-delay="1000"></div>``` |
-| 2  |  ```<div class="toast" data-delay="2000"></div>``` |
-| 3  |  ```<div class="toast" data-delay="3000"></div>``` |
-| ...  |  ```...``` |
+| :-------: | :---------- |
+| 1         |  ```<div class="toast" data-delay="1000"></div>``` |
+| 2         |  ```<div class="toast" data-delay="2000"></div>``` |
+| 3         |  ```<div class="toast" data-delay="3000"></div>``` |
+| ...       |  ```...``` |
+
 ---
 - **position**
 
@@ -120,15 +118,16 @@ Default value:
 
 Description:
 
-| parameter |  |
-| :----------: | :----------: |
-| topLeft  |  |
-| topCenter  |  |
-| topRight  |  |
-| bottomLeft  |  |
-| bottomCenter  |  |
-| bottomRight  |  |
-| center  |  |
+| parameter     |
+| :-----------: |
+| topLeft       |
+| topCenter     |
+| topRight      |
+| bottomLeft    |
+| bottomCenter  |
+| bottomRight   |
+| center        |
+
 ---
 - **releaseTime**
 
@@ -147,12 +146,12 @@ Default value:undefined
 
 Description:
 
-| parameter |  |
-| :----------: | :----------: |
-| success  |  |
-| danger  |  |
-| warning  |  |
-| info  |  |
+| parameter |
+| :-------: |
+| success   |
+| danger    |
+| warning   |
+| info      |
 
 - **eventType**
 
@@ -164,12 +163,12 @@ Description:
 
 eventType and eventFunction must exist at the same time, otherwise the event function will be invalid.
 
-| parameter |  |
-| :----------: | :----------: |
-| show |  |
-| shown  |  |
-| hide  |  |
-| hidden  |  |
+| parameter |
+| :-------: |
+| show      |
+| shown     |
+| hide      |
+| hidden    |
 
 - **eventFunction**
 
@@ -189,7 +188,8 @@ Default value:alert
 
 Description:
 
-| parameter |  |
-| :----------: | :----------: |
-| alert  |  |
-| status  |  |
+| parameter |
+| :-------: |
+| alert     |
+| status    |
+
