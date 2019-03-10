@@ -2,7 +2,7 @@
   "name": "bootstrap-toasts",
   "version": "0.0.12",
   "description": "Bootstrap toasts",
-  "main": "src/bootstrap-toasts.js",
+  "main": "dist/bootstrap-toasts.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,5 +24,10 @@
     "gulp-header": "^2.0.7",
     "gulp-rename": "^1.4.0",
     "gulp-terser": "^1.1.7"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.7"
   }
 }
