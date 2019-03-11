@@ -8,7 +8,7 @@ Currently relying on Bootstrap and jQuery environments, because it is a function
 
 Supports arbitrary calls of ten parameters, supports callback functions based on toasts events.
 
-The minimum version of the production version should be no less than 0.1.0
+The minimum version of the production version should be no less than 1.0.0
 
 
 <p align="center">
