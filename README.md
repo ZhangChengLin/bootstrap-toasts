@@ -8,8 +8,6 @@ Currently relying on Bootstrap and jQuery environments, because it is a function
 
 Supports arbitrary calls of ten parameters, supports callback functions based on toasts events.
 
-The minimum version of the production version should be no less than 1.0.0
-
 
 <p align="center">
 <img alt="GitHub Release" src="https://img.shields.io/github/release/zhangchenglin/bootstrap-toasts.svg">
@@ -30,7 +28,7 @@ The minimum version of the production version should be no less than 1.0.0
 
 ## How to install?
 ```
-npm install bootstrap-toasts --save-dev
+npm install bootstrap-toasts --save
 ```
 
 ## CDN
