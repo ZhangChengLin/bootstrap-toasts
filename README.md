@@ -23,7 +23,7 @@ Supports arbitrary calls of ten parameters, supports callback functions based on
 
 ## Demo 
 
-<a href="https://zhangchenglin.github.io/bootstrap-toasts/demo.html" title="_blank" title="DEMO">https://zhangchenglin.github.io/bootstrap-toasts/demo.html</a>
+<a href="https://zhangchenglin.github.io/bootstrap-toasts/demo.html" target="_blank" title="bootstrap-toasts DEMO">https://zhangchenglin.github.io/bootstrap-toasts/demo.html</a>
 
 
 ## How to install?
