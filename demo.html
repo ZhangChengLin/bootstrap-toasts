@@ -17,81 +17,79 @@
     <a class="my-2 btn btn-block btn-outline-secondary" href="https://zhangchenglin.github.io/bootstrap-toasts/" target="_blank" title="How To Use">How To Use</a>
     <div class="mt-4">
         <div>position （位置）</div>
-        <a href="javascript:" class="btn btn-sm border border-dark"
+        <a href="javascript:" class="mb-2 mb-lg-2 btn btn-sm border"
            onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','',6,'topLeft')">topLeft（左上）</a>
-        <a href="javascript:" class="btn btn-sm border border-dark disabled"
+        <a href="javascript:" class="mb-2 mb-lg-2 btn btn-sm border border-dark disabled"
            onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','',6,'topCenter')">topCenter（顶部中心）</a>
-        <a href="javascript:" class="btn btn-sm border border-dark"
+        <a href="javascript:" class="mb-2 mb-lg-2 btn btn-sm border border-dark"
            onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','',6,'topRight')">topRight（右上）</a>
-        <a href="javascript:" class="btn btn-sm border border-dark"
+        <a href="javascript:" class="mb-2 mb-lg-2 btn btn-sm border border-dark"
            onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','',6,'bottomLeft')">bottomLeft（左下）</a>
-        <a href="javascript:" class="btn btn-sm border border-dark disabled"
+        <a href="javascript:" class="mb-2 mb-lg-2 btn btn-sm border border-dark disabled"
            onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','',6,'bottomCenter')">bottomCenter（底部中心）</a>
-        <a href="javascript:" class="btn btn-sm border border-dark"
+        <a href="javascript:" class="mb-2 mb-lg-2 btn btn-sm border border-dark"
            onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','',6,'bottomRight')">bottomRight（右下）</a>
-        <a href="javascript:" class="btn btn-sm border border-dark disabled"
+        <a href="javascript:" class="mb-2 mb-lg-2 btn btn-sm border border-dark disabled"
            onclick="bootstrapToasts('Title（标题）','This is a default message.<br>This is a new line.<br>这是一条默认消息。<br>这是另外一行。','',6,'center')">center（屏幕中心）</a>
     </div>
     <div class="mt-4 p-2 border border-secondary rounded">
-        <div class="mb-2 p-2 border border-secondary rounded">
+        <div class="mb-2 p-2 border rounded">
             <div>title （标题）</div>
             <div class="input-group">
                 <div class="input-group-prepend">
-                    <label for="title" class="input-group-text text-success">title:</label>
+                    <label for="title" class="input-group-text bg-success text-light">title:</label>
                 </div>
-                <input type="text" name="title" id="title" class="form-control" value="Default Title">
+                <input type="text" name="title" id="title" class="form-control border-success" value="Default Title">
             </div>
         </div>
-        <div class="mb-2 p-2 border border-secondary rounded" id="titleColor">
+        <div class="mb-2 p-2 border rounded" id="titleColor">
             <div>title background color （标题背景颜色）</div>
-            <div class="mb-2 form-check form-check-inline">
-                <input type="radio" name="title_color" class="form-check-input" id="titleColor_primary" value="primary">
-                <label class="form-check-label btn btn-sm btn-outline-primary" for="titleColor_primary">primary</label>
+            <div class="mb-2 custom-radio custom-control custom-control-inline">
+                <input type="radio" name="title_color" class="custom-control-input" id="titleColor_primary" value="primary">
+                <label class="custom-control-label btn btn-sm btn-outline-primary" for="titleColor_primary">primary</label>
             </div>
-            <div class="mb-2 form-check form-check-inline">
-                <input type="radio" name="title_color" class="form-check-input" id="titleColor_secondary"
-                       value="secondary">
-                <label class="form-check-label btn btn-sm btn-outline-secondary"
-                       for="titleColor_secondary">secondary</label>
+            <div class="mb-2 custom-radio custom-control custom-control-inline">
+                <input type="radio" name="title_color" class="custom-control-input" id="titleColor_secondary" value="secondary">
+                <label class="custom-control-label btn btn-sm btn-outline-secondary" for="titleColor_secondary">secondary</label>
             </div>
-            <div class="mb-2 form-check form-check-inline">
-                <input type="radio" name="title_color" class="form-check-input" id="titleColor_success" value="success">
-                <label class="form-check-label btn btn-sm btn-outline-success" for="titleColor_success">success</label>
+            <div class="mb-2 custom-radio custom-control custom-control-inline">
+                <input type="radio" name="title_color" class="custom-control-input" id="titleColor_success" value="success">
+                <label class="custom-control-label btn btn-sm btn-outline-success" for="titleColor_success">success</label>
             </div>
-            <div class="mb-2 form-check form-check-inline">
-                <input type="radio" name="title_color" class="form-check-input" id="titleColor_danger" value="danger">
-                <label class="form-check-label btn btn-sm btn-outline-danger" for="titleColor_danger">danger</label>
+            <div class="mb-2 custom-radio custom-control custom-control-inline">
+                <input type="radio" name="title_color" class="custom-control-input" id="titleColor_danger" value="danger">
+                <label class="custom-control-label btn btn-sm btn-outline-danger" for="titleColor_danger">danger</label>
             </div>
-            <div class="mb-2 form-check form-check-inline">
-                <input type="radio" name="title_color" class="form-check-input" id="titleColor_warning" value="warning">
-                <label class="form-check-label btn btn-sm btn-outline-warning" for="titleColor_warning">warning</label>
+            <div class="mb-2 custom-radio custom-control custom-control-inline">
+                <input type="radio" name="title_color" class="custom-control-input" id="titleColor_warning" value="warning">
+                <label class="custom-control-label btn btn-sm btn-outline-warning" for="titleColor_warning">warning</label>
             </div>
-            <div class="mb-2 form-check form-check-inline">
-                <input type="radio" name="title_color" class="form-check-input" id="titleColor_info" value="info">
-                <label class="form-check-label btn btn-sm btn-outline-info" for="titleColor_info">info</label>
+            <div class="mb-2 custom-radio custom-control custom-control-inline">
+                <input type="radio" name="title_color" class="custom-control-input" id="titleColor_info" value="info">
+                <label class="custom-control-label btn btn-sm btn-outline-info" for="titleColor_info">info</label>
             </div>
-            <div class="mb-2 form-check form-check-inline">
-                <input type="radio" name="title_color" class="form-check-input" id="titleColor_dark" value="dark">
-                <label class="form-check-label btn btn-sm btn-outline-dark" for="titleColor_dark">dark</label>
+            <div class="mb-2 custom-radio custom-control custom-control-inline">
+                <input type="radio" name="title_color" class="custom-control-input" id="titleColor_dark" value="dark">
+                <label class="custom-control-label btn btn-sm btn-outline-dark" for="titleColor_dark">dark</label>
             </div>
         </div>
-        <div class="mb-2 p-2 border border-secondary rounded">
+        <div class="mb-2 p-2 border rounded">
             <div>Delay (延迟)</div>
             <label for="delay">Please enter a valid number. （请输入有效数字）</label>
             <div class="input-group mb-3">
-                <input type="number" class="form-control" id="delay" step="2" min="1" value="1">
+                <input type="number" class="form-control border-success" id="delay" step="2" min="1" value="1">
                 <div class="input-group-append">
-                    <span class="input-group-text">second (秒)</span>
+                    <span class="input-group-text bg-success text-light">second (秒)</span>
                 </div>
             </div>
         </div>
-        <div class="mb-2 p-2 border border-secondary rounded">
+        <div class="mb-2 p-2 border rounded">
             <div>Icon （图标）</div>
             <div class="input-group">
                 <div class="input-group-prepend">
-                    <label class="input-group-text" for="icon">Icon</label>
+                    <label class="input-group-text bg-success text-light" for="icon">Icon</label>
                 </div>
-                <select class="custom-select" id="icon">
+                <select class="custom-select custom-select-lg border-success" id="icon">
                     <option selected>Choose...</option>
                     <option value="success">iconSuccess</option>
                     <option value="danger">iconDanger</option>
@@ -105,26 +103,26 @@
             <p>Event Type （事件类型）</p>
             <div class="form-check form-check-inline">
                 <input type="radio" name="event_type" id="event_type_show" class="form-check-input" value="show">
-                <label for="event_type_show" class="form-check-label">show</label>
+                <label for="event_type_show" class="mr-2 form-check-label">show</label>
             </div>
             <div class="form-check form-check-inline">
                 <input type="radio" name="event_type" id="event_type_shown" class="form-check-input" value="shown">
-                <label for="event_type_shown" class="form-check-label">shown</label>
+                <label for="event_type_shown" class="mr-2 form-check-label">shown</label>
             </div>
             <div class="form-check form-check-inline">
                 <input type="radio" name="event_type" id="event_type_hide" class="form-check-input" value="hide">
-                <label for="event_type_hide" class="form-check-label">hide</label>
+                <label for="event_type_hide" class="mr-2 form-check-label">hide</label>
             </div>
             <div class="form-check form-check-inline">
                 <input type="radio" name="event_type" id="event_type_hidden" class="form-check-input" value="hidden">
-                <label for="event_type_hidden" class="form-check-label">hidden</label>
+                <label for="event_type_hidden" class="mr-2 form-check-label">hidden</label>
             </div>
         </div>
 
         <div class="mb-2 p-2 rounded bg-secondary text-white">
             <p>Event Function （事件函数）</p>
             <label for="eventFunction" class="form-check-label">select a function （请选择一个函数）</label>
-            <select id="eventFunction" class="custom-select" size="5">
+            <select id="eventFunction" class="custom-select custom-select-lg" size="5">
                 <!--<option selected>select a function</option>-->
                 <option value="eventFunction_show">eventFunction_show</option>
                 <option value="eventFunction_shown">eventFunction_shown</option>
